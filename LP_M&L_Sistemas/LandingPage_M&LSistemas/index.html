@@ -8,6 +8,7 @@
     <script src="src/js/head.js"></script>
     <title>M&L Sistemas</title>
     <link rel="icon" href="src/images/about/IconeTela.ico" type="image/x-icon">
+    <link rel="stylesheet" href="src/styles/main.css">
 </head>
 <body>
     <!-- NAVBAR -->
@@ -64,13 +65,13 @@
     <!-- HOME -->
     <section id="home" class="bg-white dark:bg-gray-900">
         <div class="py-8 px-4 mx-auto max-w-screen-xl text-center lg:py-16 lg:px-12">
-            <a href="#" class="inline-flex justify-between items-center py-1 px-1 pr-4 mb-7 text-sm text-gray-700 bg-gray-100 rounded-full dark:bg-gray-800 dark:text-white hover:bg-gray-200 dark:hover:bg-gray-700" role="alert">
+            <!-- <a href="#" class="inline-flex justify-between items-center py-1 px-1 pr-4 mb-7 text-sm text-gray-700 bg-gray-100 rounded-full dark:bg-gray-800 dark:text-white hover:bg-gray-200 dark:hover:bg-gray-700" role="alert">
                 <span class="text-sm font-medium px-4 py-1">
                     <i class="fa-regular fa-lightbulb pe-1"></i>
                     Mostre suas ideias para o mundo
                 </span> 
                 <svg class="ml-2 w-5 h-5" fill="currentColor" viewBox="0 0 20 20" xmlns="http://www.w3.org/2000/svg"><path fill-rule="evenodd" d="M7.293 14.707a1 1 0 010-1.414L10.586 10 7.293 6.707a1 1 0 011.414-1.414l4 4a1 1 0 010 1.414l-4 4a1 1 0 01-1.414 0z" clip-rule="evenodd"></path></svg>
-            </a>
+            </a> -->
             <h1 class="mb-4 text-4xl font-extrabold tracking-tight leading-none text-gray-900 md:text-5xl lg:text-6xl dark:text-white">
                 Conheça nossas soluções <br>
                 para a
@@ -360,12 +361,12 @@
         <div class="py-8 lg:py-16 px-4 mx-auto max-w-screen-md">
             <h2 class="mb-4 text-4xl tracking-tight font-extrabold text-center text-gray-900 dark:text-white">Entre em contato</h2>
             <p class="mb-8 lg:mb-16 font-light text-center text-gray-500 dark:text-gray-400 sm:text-xl">
-                Tem uma dúvida técnica? Quer enviar feedback sobre nossos serviços? 
+                Tem uma dúvida técnica? Quer enviar feedback sobre nossos serviços?
                 Precisa de mais detalhes sobre nossos planos? Estamos aqui para ajudar. Fale com a gente!
             </p>
-            <form action="https://formsubmit.co/mlsistemas.contato@gmail.com" method="POST" class="space-y-8">
+            <form id="contactForm" class="space-y-8">
                 <input type="hidden" name="_captcha" value="false">
-                <input type="hidden" name="_next" value="http://127.0.0.1:5500/LandingPage_M&LSistemas/obrigado.html">
+                <input type="hidden" name="_next" value="http://127.0.0.1:5500//LandingPage_M&LSistemas/obrigado.html">
     
                 <div>
                     <label for="email" class="block mb-2 text-sm font-medium text-gray-900 dark:text-gray-300">Seu e-mail</label>
@@ -379,7 +380,13 @@
                     <label for="message" class="block mb-2 text-sm font-medium text-gray-900 dark:text-gray-400">Sua mensagem</label>
                     <textarea name="message" id="message" rows="6" class="block p-2.5 w-full text-sm text-gray-900 bg-gray-50 rounded-lg shadow-sm border border-gray-300 focus:ring-primary-500 focus:border-primary-500 dark:bg-gray-700 dark:border-gray-600 dark:placeholder-gray-400 dark:text-white dark:focus:ring-primary-500 dark:focus:border-primary-500" placeholder="Deixe sua mensagem" required></textarea>
                 </div>
-                <button type="submit" class="text-white bg-blue-700 hover:bg-blue-800 focus:ring-4 focus:outline-none focus:ring-blue-300 font-medium rounded-lg text-sm px-4 py-2 text-center dark:bg-blue-600 dark:hover:bg-blue-700 dark:focus:ring-blue-800">
+                <dialog>
+                    <p>Obrigado por sua mensagem! Em breve entraremos em contato. <br>
+                      Sua mensagem foi enviada ao nosso whatsapp e ao nosso e-mail.
+                    </p>
+                    <button id="ButtonDialog" class="dialog-button">Ok</button>
+                  </dialog>
+                <button id="ButtonModal" type="submit" class="text-white bg-blue-700 hover:bg-blue-800 focus:ring-4 focus:outline-none focus:ring-blue-300 font-medium rounded-lg text-sm px-4 py-2 text-center dark:bg-blue-600 dark:hover:bg-blue-700 dark:focus:ring-blue-800">
                     Enviar
                 </button>
             </form>
@@ -392,8 +399,8 @@
             <div class="md:flex md:justify-between">
                 <div class="mb-6 md:mb-0">
                     <a href="#" class="flex items-center">
-                        <img src="src/images/about/LogoLigth.png" class="block dark:hidden w-32 h-auto" alt="M&L Sistemas">
-                        <img src="src/images/logo/footer.png" class="hidden dark:block w-32 h-auto" alt="M&L Sistemas">
+                        <img src="src/images/about/LogoLigth.png" class="block dark:hidden w-40 h-auto" alt="M&L Sistemas">
+                        <img src="src/images/about/ImgLogoSemFundoDark.png" class="hidden dark:block w-40 h-auto" alt="M&L Sistemas">
                     </a>
                 </div>
                 <div class="grid grid-cols-2 gap-8 sm:gap-6 sm:grid-cols-3">
