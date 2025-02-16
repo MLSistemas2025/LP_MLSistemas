@@ -5,6 +5,18 @@ const button = document.getElementById("ButtonModal");
 const modal = document.querySelector("dialog");
 const buttonClose = document.querySelector("dialog button");
 
+const videoButton = document.getElementById('videoButton');
+
+function updateButtonColor() {
+    if (document.body.classList.contains('dark')) {
+        videoButton.style.setProperty('--clr', 'white'); // Cor para modo escuro
+    } else {
+        videoButton.style.setProperty('--clr', '#007bff'); // Cor para modo claro
+    }
+}
+updateButtonColor();
+document.body.addEventListener('click', updateButtonColor); 
+
 button.onclick = function() {
   modal.showModal();
 }
